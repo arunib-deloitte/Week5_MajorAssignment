@@ -1,0 +1,62 @@
+
+version: 2
+
+models:
+  - name: milestone1_1
+    description: "Calculate Monthly average NAV, Repurchase & Sale Price for each scheme"
+    columns:
+      - name: nav_month
+      - name: Scheme
+      - name: Average_Nav
+      - name: Average_Repurchase_Price
+      - name: Average_Sale_Price
+  
+  - name: Milestone1_2
+    description: "Find out each scheme Max and Min NAV value "
+    columns:
+      - name: codes
+        tests:
+          - unique
+          - not_null
+      - name: min_nav
+      - name: max_nav
+
+  - name: SubTable 
+    columns:
+      - name: nav_date
+      - name: year
+      - name: month
+      - name: nav
+
+  - name: Milestone2_1
+    columns:
+      - name: nav_date
+      - name: year
+      - name: month
+      - name: nav
+      - name: YTD
+      - name: MTD
+
+  - name: Milestone2_4
+    columns:
+      - name: codes
+        tests:
+          - unique
+          - not_null
+      - name: YTD
+      - name: MTD
+  
+  - name: Milestone2_3
+    columns:
+      - name: codes
+        tests:
+          - unique
+          - not_null
+      - name: name
+      - name: stop_date
+      
+  - name: Milestone2_5
+    columns:
+      - name: category
+      - name: min_returns
+      - name: max_returns
